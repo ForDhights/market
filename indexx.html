@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #0f2027, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #00f5ff, #ff00ea, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 5s linear infinite;
+    }
+    header p { opacity: 0.8; margin-top: 10px; }@keyframes glow {
+  0% { filter: drop-shadow(0 0 5px #00f5ff); }
+  50% { filter: drop-shadow(0 0 15px #ff00ea); }
+  100% { filter: drop-shadow(0 0 5px #00ff88); }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(120deg, #00f5ff, #ff00ea, #00ff88);
+  z-index: -1;
+  border-radius: 18px;
+  animation: rgb 6s linear infinite;
+}
+@keyframes rgb {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.card h2 { margin-bottom: 10px; }
+.card p { font-size: 0.9rem; opacity: 0.85; }
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #00f5ff, #ff00ea);
+  transition: transform .2s, box-shadow .2s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #ff00ea;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NEWBEL SMP</h1>
+    <p>Menu Rank</p>
+  </header>  <section class="container">
+    <div class="card">
+      <h2>FLORINEX</h2>
+      <p>#fitur -</p>
+      <a href="ISI_LINK_URL" class="btn">Buy</a>
+    </div>
+    <div class="card">
+      <h2>MYTHIC</h2>
+      <p>#fitur -</p>
+      <a href="ISI_LINK_URL" class="btn">Buy</a>
+    </div>
+    <div class="card">
+      <h2>DIAMOND</h2>
+      <p>#fitur -</p>
+      <a href="ISI_LINK_URL" class="btn">Buy</a>
+    </div>
+    <div class="card">
+      <h2>GOLD</h2>
+      <p>#fitur -</p>
+      <a href="ISI_LINK_URL" class="btn">Buy</a>
+    </div>
+  </section>  <footer>
+    © 2026 by Zerox •support zerox@gmail.com
+  </footer>
+</body>
+</html>
